@@ -26,3 +26,8 @@ window.onscroll = function () {
 btnTopo.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Abrir jogo da SETEC
+function abrirJogo() {
+  window.location.href = "jogo.html";
+}

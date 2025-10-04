@@ -13,7 +13,6 @@ header {
   padding: 40px 20px;
   background: linear-gradient(90deg, #001f4d, #003399);
   box-shadow: 0 0 20px #0ff;
-  position: relative;
 }
 
 .logo {
@@ -25,8 +24,9 @@ header {
 }
 
 .banner {
-  width: 90%;
-  max-width: 800px;
+  width: 80%;
+  max-width: 700px;
+  height: auto; /* mantém proporção */
   border-radius: 15px;
   margin-top: 20px;
   box-shadow: 0 0 25px #00ccff;
@@ -73,11 +73,9 @@ h1 {
   transition: all 0.6s ease-out;
 }
 
-/* Lados */
 .container.left { left: 0; }
 .container.right { left: 50%; }
 
-/* Conteúdo */
 .content {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #00ccff;
@@ -91,7 +89,6 @@ h1 {
 .container.left .content { margin-right: 50px; }
 .container.right .content { margin-left: 50px; }
 
-/* Bolinhas na linha */
 .container::before {
   content: '';
   position: absolute;
@@ -106,20 +103,13 @@ h1 {
   box-shadow: 0 0 15px #00ccff;
 }
 
-.container.right::before {
-  left: -10px;
-}
-
-/* Efeito de aparecer */
-.container.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.container.right::before { left: -10px; }
+.container.show { opacity: 1; transform: translateY(0); }
 
 /* ======== JOGO SECTION ======== */
 .jogo-section {
   text-align: center;
-  margin: 100px 20px;
+  margin: 80px 20px;
   padding: 40px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid #00ccff;
@@ -141,10 +131,7 @@ h1 {
   box-shadow: 0 0 20px #00ccff;
 }
 
-.botao-jogo:hover {
-  background: #0099ff;
-  transform: scale(1.05);
-}
+.botao-jogo:hover { background: #0099ff; transform: scale(1.05); }
 
 /* ======== BOTÃO TOPO ======== */
 #btnTopo {
@@ -163,9 +150,7 @@ h1 {
   transition: transform 0.3s;
 }
 
-#btnTopo:hover {
-  transform: scale(1.1);
-}
+#btnTopo:hover { transform: scale(1.1); }
 
 /* ======== RODAPÉ ======== */
 footer {
@@ -185,8 +170,6 @@ footer {
     padding-right: 25px;
   }
   .container.right { left: 0; }
-  .container::before {
-    left: 15px;
-    right: auto;
-  }
+  .container::before { left: 15px; right: auto; }
+  .banner { width: 95%; } /* banner menor em celular */
 }

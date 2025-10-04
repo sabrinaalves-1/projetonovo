@@ -1,1 +1,155 @@
 
+/* ======== ESTILO GERAL ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #0a0f29, #010417);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #001f4d, #003399);
+  box-shadow: 0 0 20px #0ff;
+  position: relative;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00ccff;
+  box-shadow: 0 0 15px #00ccff;
+}
+
+h1 {
+  margin: 15px 0 5px;
+  font-size: 2rem;
+  text-shadow: 0 0 15px #00ccff;
+}
+
+.subtitulo {
+  color: #a8c7ff;
+  font-size: 1.1rem;
+}
+
+/* ======== LINHA DO TEMPO ======== */
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 60px auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background: #00ccff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  box-shadow: 0 0 15px #00ccff;
+}
+
+/* Containers */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+/* Lados */
+.container.left { left: 0; }
+.container.right { left: 50%; }
+
+/* Conteúdo */
+.content {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #00ccff;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.container.left .content { margin-right: 50px; }
+.container.right .content { margin-left: 50px; }
+
+/* Bolinhas na linha */
+.container::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background: #00ccff;
+  border: 3px solid white;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 15px #00ccff;
+}
+
+.container.right::before {
+  left: -10px;
+}
+
+/* Efeito de aparecer */
+.container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ======== BOTÃO TOPO ======== */
+#btnTopo {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #00ccff;
+  border: none;
+  color: #000;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00ccff;
+  font-size: 20px;
+  display: none;
+  transition: transform 0.3s;
+}
+
+#btnTopo:hover {
+  transform: scale(1.1);
+}
+
+/* ======== RODAPÉ ======== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #001f4d;
+  color: #b0c4ff;
+  margin-top: 60px;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media screen and (max-width: 700px) {
+  .timeline::after { left: 31px; }
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .container.right { left: 0; }
+  .container::before {
+    left: 15px;
+    right: auto;
+  }
+}

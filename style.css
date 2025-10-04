@@ -25,15 +25,17 @@ header {
 
 /* ======== BANNER ======== */
 .banner {
-  width: 90%;           /* ocupa mais largura */
-  max-width: 800px;     /* largura máxima maior */
-  height: 250px;        /* altura fixa menor para retangular */
+  width: 90%;            /* largura maior */
+  max-width: 800px;      /* limite de largura */
+  height: auto;          /* mantém proporção natural */
   border-radius: 15px;
   margin-top: 20px;
   box-shadow: 0 0 25px #00ccff;
-  object-fit: cover;    /* preenche o contêiner */
+  object-fit: contain;   /* mostra a imagem inteira */
   object-position: center top; /* foca no rosto do robô */
+  background-color: #010417;   /* evita fundo branco nos espaços */
 }
+
 
 
 h1 {

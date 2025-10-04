@@ -23,13 +23,16 @@ header {
   box-shadow: 0 0 15px #00ccff;
 }
 
+/* ======== BANNER ======== */
 .banner {
   width: 80%;
   max-width: 700px;
   height: auto; /* mantém proporção */
+  max-height: 400px; /* limita altura */
   border-radius: 15px;
   margin-top: 20px;
   box-shadow: 0 0 25px #00ccff;
+  object-fit: cover; /* garante que a imagem não estique */
 }
 
 h1 {
@@ -48,6 +51,7 @@ h1 {
   position: relative;
   max-width: 1000px;
   margin: 60px auto;
+  z-index: 1;
 }
 
 .timeline::after {
@@ -60,6 +64,7 @@ h1 {
   left: 50%;
   margin-left: -3px;
   box-shadow: 0 0 15px #00ccff;
+  z-index: 0; /* linha atrás dos conteúdos */
 }
 
 /* Containers */
@@ -84,6 +89,7 @@ h1 {
   position: relative;
   box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
   backdrop-filter: blur(5px);
+  z-index: 2; /* garante que o conteúdo fique acima da linha */
 }
 
 .container.left .content { margin-right: 50px; }

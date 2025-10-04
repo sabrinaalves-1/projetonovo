@@ -51,7 +51,6 @@ h1 {
   position: relative;
   max-width: 1000px;
   margin: 60px auto;
-  padding-bottom: 100px; /* espaço extra no final para não cortar a seção do jogo */
 }
 
 .timeline::after {
@@ -60,8 +59,7 @@ h1 {
   width: 6px;
   background: #00ccff;
   top: 0;
-  /* fazer a linha parar antes da seção do jogo */
-  bottom: 180px; /* ajusta conforme a altura da seção do jogo */
+  bottom: 0; /* cobre apenas a timeline */
   left: 50%;
   margin-left: -3px;
   box-shadow: 0 0 15px #00ccff;

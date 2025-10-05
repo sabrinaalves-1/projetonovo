@@ -1,1 +1,41 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Interativo - SETEC Barbosa Ferraz</title>
+  <link rel="stylesheet" href="jogo.css">
+</head>
+<body>
+  <header>
+    <h1>🕹️ Desafio Interativo SETEC</h1>
+    <p class="subtitulo">Teste seus conhecimentos sobre tecnologia!</p>
+  </header>
+
+  <main>
+    <div class="quiz-container">
+      <div id="pergunta-container">
+        <p id="pergunta"></p>
+      </div>
+      <div id="opcoes-container">
+        <!-- Botões das respostas serão inseridos via JS -->
+      </div>
+      <button id="proxima-btn" onclick="proximaPergunta()">Próxima</button>
+    </div>
+
+    <div id="resultado" class="hidden">
+      <h2>🎉 Parabéns!</h2>
+      <p>Você terminou o desafio.</p>
+      <p id="pontuacao"></p>
+      <button onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Colégio Barbosa Ferraz — Semana de Tecnologia</p>
+  </footer>
+
+  <script src="jogo.js"></script>
+</body>
+</html>

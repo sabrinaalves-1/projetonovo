@@ -23,64 +23,55 @@ header {
   border: 3px solid #00ccff;
   box-shadow: 0 0 15px #00ccff;
 }
-
-/* ======== FAIXA DE IMAGENS ANIMADAS ======== */
-.faixa-imagens {
-  position: absolute;     
-  top: 50%;               
-  left: 0;
-  width: 100%;
-  height: 150px;          
-  overflow: hidden;
-  z-index: 0;             
-  pointer-events: none;   
-}
-
-.faixa-track {
-  display: flex;
-  width: calc(200%);      
-  animation: mover 20s linear infinite;
-}
-
-.faixa-track img {
-  height: 100%;
-  margin-right: 20px;
-  object-fit: contain;
-}
-
-@keyframes mover {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ======== BANNER ======== */
-.banner {
-  position: relative;      
-  width: 80%;              
-  max-width: 700px;
-  height: auto;            
-  border-radius: 15px;
-  margin-top: 20px;
-  box-shadow: 0 0 25px #00ccff;
-  object-fit: contain;     
-  object-position: center top;
-  z-index: 1;              
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* Títulos */
 h1 {
-  margin: 15px 0 5px;
+  margin-bottom: 10px;
   font-size: 2rem;
   text-shadow: 0 0 15px #00ccff;
 }
 
 .subtitulo {
+  margin-bottom: 30px;
   color: #a8c7ff;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
+/* ======== FAIXA DE IMAGENS ANIMADAS ======== */
+.faixa-imagens {
+  width: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2); /* opcional, deixa a faixa destacada */
+  border-radius: 15px;
+  padding: 20px 0;
+}
+
+.faixa-track {
+  display: flex;
+  width: calc(200%); /* duplicamos as imagens para efeito infinito */
+  animation: mover 20s linear infinite;
+}
+
+.faixa-track img {
+  height: 150px;       /* altura das imagens */
+  margin-right: 20px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ccff;
+}
+
+/* Animação de movimento contínuo */
+@keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media screen and (max-width: 700px) {
+  .faixa-track img {
+    height: 100px;
+    margin-right: 15px;
+  }
+}
 /* ======== LINHA DO TEMPO ======== */
 .timeline {
   position: relative;

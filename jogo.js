@@ -1,3 +1,4 @@
+// ====== PERGUNTAS DO JOGO ======
 const perguntas = [
   {
     pergunta: "Qual é a linguagem mais usada para desenvolvimento web?",
@@ -25,6 +26,7 @@ const proximaBtn = document.getElementById("proxima-btn");
 const resultadoEl = document.getElementById("resultado");
 const pontuacaoEl = document.getElementById("pontuacao");
 
+// ====== FUNÇÕES PRINCIPAIS ======
 function mostrarPergunta() {
   const q = perguntas[perguntaAtual];
   perguntaEl.innerText = q.pergunta;
@@ -67,5 +69,12 @@ function reiniciarJogo() {
   mostrarPergunta();
 }
 
-// Inicia o jogo
+// ====== BOTÃO VOLTAR À TELA INICIAL ======
+const voltarBtn = document.getElementById("voltarBtn");
+voltarBtn.addEventListener("click", () => {
+  window.location.href = "index.html"; // redireciona para a página inicial
+});
+
+// ====== INICIAR JOGO ======
 mostrarPergunta();
+

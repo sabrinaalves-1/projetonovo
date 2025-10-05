@@ -13,6 +13,7 @@ header {
   padding: 40px 20px;
   background: linear-gradient(90deg, #001f4d, #003399);
   box-shadow: 0 0 20px #0ff;
+  position: relative;
 }
 
 .logo {
@@ -23,17 +24,50 @@ header {
   box-shadow: 0 0 15px #00ccff;
 }
 
+/* ======== FAIXA DE IMAGENS ANIMADAS ======== */
+.faixa-imagens {
+  position: absolute;     
+  top: 50%;               
+  left: 0;
+  width: 100%;
+  height: 150px;          
+  overflow: hidden;
+  z-index: 0;             
+  pointer-events: none;   
+}
+
+.faixa-track {
+  display: flex;
+  width: calc(200%);      
+  animation: mover 20s linear infinite;
+}
+
+.faixa-track img {
+  height: 100%;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+@keyframes mover {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* ======== BANNER ======== */
 .banner {
-  width: 60%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 25px;  /* mais arredondado */
+  position: relative;      
+  width: 80%;              
+  max-width: 700px;
+  height: auto;            
+  border-radius: 15px;
   margin-top: 20px;
-  box-shadow: 0 0 20px #00ccff;;
-  object-fit: contain;   /* mostra a imagem inteira */
-  object-position: center top; /* foca no rosto do robô */
-  background-color: #010417;   /* evita fundo branco nos espaços */
+  box-shadow: 0 0 25px #00ccff;
+  object-fit: contain;     
+  object-position: center top;
+  z-index: 1;              
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
@@ -60,7 +94,7 @@ h1 {
   width: 6px;
   background: #00ccff;
   top: 0;
-  bottom: 0; /* cobre apenas a timeline */
+  bottom: 0;
   left: 50%;
   margin-left: -3px;
   box-shadow: 0 0 15px #00ccff;
@@ -89,7 +123,6 @@ h1 {
   position: relative;
   box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
   backdrop-filter: blur(5px);
-  z-index: 2; /* garante que o conteúdo fique acima da linha */
 }
 
 .container.left .content { margin-right: 50px; }

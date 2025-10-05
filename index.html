@@ -11,42 +11,55 @@
     <img src="logo.png" alt="Logo do Colégio Barbosa Ferraz" class="logo">
     <h1>Semana de Tecnologia - SETEC Barbosa Ferraz</h1>
     <p class="subtitulo">Inovação, Conhecimento e Futuro</p>
-    <!-- Imagem retangular abaixo do título -->
+
+    <!-- Faixa de imagens animadas atrás do banner -->
+    <div class="faixa-imagens">
+      <div class="faixa-track">
+        <img src="img1.png" alt="Imagem 1">
+        <img src="img2.png" alt="Imagem 2">
+        <img src="img3.png" alt="Imagem 3">
+        <img src="img4.png" alt="Imagem 4">
+        <img src="img1.png" alt="Imagem 1">
+        <img src="img2.png" alt="Imagem 2">
+      </div>
+    </div>
+
+    <!-- Imagem principal -->
     <img src="setec.png" alt="Imagem da SETEC" class="banner">
   </header>
 
   <main>
-  <!-- LINHA DO TEMPO -->
-  <div class="timeline">
-    <div class="container left">
-      <div class="content">
-        <h2>🎨 Dia 1 - Apresentações e Feiras</h2>
-        <p>Os alunos apresentam seus projetos tecnológicos e participam de feiras de inovação.</p>
+    <!-- LINHA DO TEMPO -->
+    <div class="timeline">
+      <div class="container left">
+        <div class="content">
+          <h2>🎨 Dia 1 - Apresentações e Feiras</h2>
+          <p>Os alunos apresentam seus projetos tecnológicos e participam de feiras de inovação.</p>
+        </div>
+      </div>
+
+      <div class="container right">
+        <div class="content">
+          <h2>🎮 Dia 2 - Jogos e Dinâmicas</h2>
+          <p>Integração e diversão com jogos entre turmas e atividades de raciocínio lógico.</p>
+        </div>
+      </div>
+
+      <div class="container left">
+        <div class="content">
+          <h2>💡 Dia 3 - Palestras e Encerramento</h2>
+          <p>Palestras sobre tecnologia e profissões, encerrando a SETEC com aprendizados e novas ideias.</p>
+        </div>
       </div>
     </div>
 
-    <div class="container right">
-      <div class="content">
-        <h2>🎮 Dia 2 - Jogos e Dinâmicas</h2>
-        <p>Integração e diversão com jogos entre turmas e atividades de raciocínio lógico.</p>
-      </div>
+    <!-- SEÇÃO DO JOGO -->
+    <div class="jogo-section">
+      <h2>🕹️ Desafio Interativo da SETEC</h2>
+      <p>Teste seus conhecimentos sobre tecnologia e a SETEC Barbosa Ferraz!</p>
+      <button class="botao-jogo" onclick="abrirJogo()">Jogue o Desafio</button>
     </div>
-
-    <div class="container left">
-      <div class="content">
-        <h2>💡 Dia 3 - Palestras e Encerramento</h2>
-        <p>Palestras sobre tecnologia e profissões, encerrando a SETEC com aprendizados e novas ideias.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- SEÇÃO DO JOGO (fora da timeline) -->
-  <div class="jogo-section">
-    <h2>🕹️ Desafio Interativo da SETEC</h2>
-    <p>Teste seus conhecimentos sobre tecnologia e a SETEC Barbosa Ferraz!</p>
-    <button class="botao-jogo" onclick="abrirJogo()">Jogue o Desafio</button>
-  </div>
-</main>
+  </main>
 
   <button id="btnTopo">⬆</button>
 
